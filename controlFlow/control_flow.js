@@ -49,3 +49,20 @@ let isAuthenticated = true;
 let authenticationStatus = isAuthenticated ? "Authenticated" : "Not Authenticated";
 
 console.log("Authentication Status:", authenticationStatus);
+
+let user_role = prompt("Enter your role (Employee / Enrolled Member / Subscriber / Non-Subscriber)");
+let user_access;
+
+if(user_role === "Employee"){
+    user_access = "Dietary Services";
+} else if(user_role === "Enrolled Member"){
+    user_access = "Dietary Services and one on one interactions";
+} else if(user_role === "Subscriber"){
+    user_access = "Partial Dietary Services";
+}else if(user_role === "Non-Subscriber"){
+    user_access = "Nothing bruh";
+}else{
+    console.log("Role entered is not an option");
+}
+
+console.log("Hello ",user_role,", you have access to: ",user_access);
