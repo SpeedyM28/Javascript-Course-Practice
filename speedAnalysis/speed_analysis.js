@@ -20,7 +20,7 @@ function endTest(){
 
     var timeElapsed = (endTime - startTime) / 1000;
     var userTypedText = document.getElementById("userInput").value;
-
+    const inputlen = userTypedText.length;
     var typedWords = userTypedText.split(/\s+/).filter(function (word) {
         return word !=="";
     }).length;
@@ -33,6 +33,7 @@ function endTest(){
 
     var outputDiv = document.getElementById("output");
     outputDiv.innerHTML = "<h2>Typing Test Results:</h2>" + 
+        "<p>Total Length: " + inputlen + "</p>" +
         "<p>Words Typed: " + typedWords + "</p>" + 
         "<p>Time Elapsed: " + timeElapsed.toFixed(2) + 
         "seconds</p>" + "<p>Words Per Minute (WPM): " + wpm + "</p>";
